@@ -13,6 +13,7 @@
         <module>discovery-server</module>
         <module>user-service</module>
         <module>api-gateway</module>
+        <module>session-service</module>
     </modules>
 
     <properties>

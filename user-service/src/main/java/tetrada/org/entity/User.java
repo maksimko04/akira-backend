@@ -2,7 +2,6 @@ package tetrada.org.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import tetrada.org.model.Role;
@@ -12,7 +11,6 @@ import tetrada.org.model.Role;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,12 +7,12 @@ import tetrada.org.entity.User;
 @Component
 public class UserCreateMapper implements Mapper<UserCreateDto, User>{
     @Override
-    public User map(UserCreateDto object) {
-        return User.builder()
-                .login(object.getLogin())
-                .password(object.getPassword())
-                .firstName(object.getFirstName())
-                .lastName(object.getLastName())
-                .build();
+    public User map(UserCreateDto userCreateDto) {
+        User user = new User();
+        user.setLogin(userCreateDto.getLogin());
+        user.setFirstName(userCreateDto.getFirstName());
+        user.setLastName(userCreateDto.getLastName());
+        user.setPassword(userCreateDto.getPassword());
+        return user;
     }
 }

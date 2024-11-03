@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: session-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/sessions
+    username: postgres
+    password: qwerty
+    driver-class-name: org.postgresql.Driver
+    flyway:
+      schemas:
+        - public
+  redis:
+    host: localhost
+    port: 6379
+server:
+  port: 0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
